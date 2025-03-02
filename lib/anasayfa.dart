@@ -28,10 +28,7 @@ class _AnasayfaState extends State<Anasayfa> {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-            TextButton(onPressed:(){ }  ,
-              child:Text("Cheese",style : TextStyle(color:yaziRenk)),
-              style:TextButton.styleFrom(backgroundColor: anaRenk),
-            ),
+                Chip(icerik: "chdsdsdsdeese"),
             TextButton(onPressed:(){ }  ,
               child:Text("Sousage",style : TextStyle(color:yaziRenk)),
               style:TextButton.styleFrom(backgroundColor: anaRenk),
@@ -47,9 +44,49 @@ class _AnasayfaState extends State<Anasayfa> {
           ]
 
           ),
+          Column(
+            children: [
+              Text("20 min ",style : TextStyle(fontSize: 22,color:yaziRenk2,fontWeight: FontWeight.bold),),
+              Text("Delivery ",style : TextStyle(fontSize: 22,color:anaRenk,fontWeight: FontWeight.bold),),
+              Text("Meat lover get ready to Pizza! ",style : TextStyle(fontSize: 24,color:yaziRenk2),),
+
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+                    Text("\$ 5.98" ,style:TextStyle(fontSize:44,color:anaRenk,fontWeight:FontWeight.bold),),
+                    SizedBox(width: 200,height: 50,
+                      child: TextButton(onPressed:(){ }  ,
+                                         child:Text("Add to Card",style : TextStyle(color:yaziRenk,fontSize: 18)),
+                      style:TextButton.styleFrom(backgroundColor: anaRenk),
+                      ),
+                    ),
+
+                ],
+                    ),
+          ),
         ]
+
     ),
 
     );
+  }
+}
+
+
+class Chip extends StatelessWidget {
+ String icerik;
+
+
+ Chip({required this.icerik});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(onPressed:(){ }  ,
+      child:Text("Pepper",style : TextStyle(color:yaziRenk)),
+      style:TextButton.styleFrom(backgroundColor: anaRenk),
+    ) ;
   }
 }
